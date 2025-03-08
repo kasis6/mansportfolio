@@ -38,6 +38,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         .navbar a:hover {background-color: #575757;}
         .content {padding: 80px 20px;}
             
+                <--tris bildes-->
+                .image-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;}
+    .image-container img {
+        width: 33%; 
+        height: auto;}
+            
         </style>
         
     </head>
@@ -46,9 +56,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <--navigation bar-->
       <div class="navbar">
         <a href="#home">Info</a>
-        <a href="#about">Info</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">GIMP</a>
+        <a href="#services">Grupu projekts</a>
+        <a href="#contact">Video</a>
+        <a href="#content">Word/Excel</a>
     </div>
   
         <img src="images/kalni.jpg" style="width:100%;min-height:350px;max-height:600px;">
@@ -66,11 +77,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 <li>Word</li>
                 <li>Excel</li>             
         </ul>
-        <h3>GIMP</h3>
+       <div id="about"> <h3>GIMP</h3>
         <p> Mums gimpā bija jātaisa viskaut kas, jārediģē attēli, vārdi un jāpapildina tie.
-        Beigās gimp darbiņā bija jārediģē savs vārds, kāds attēls un jātaisa gif. </p>
-        <img src="images/laiva.png"> 
-        <img src="images/vards.png">
+        Beigās gimp darbiņā bija jārediģē/jāstilizē savs vārds, kā arī bija jāstilizē kāds attēls pēc izvēles un jātaisa gif. </p></div>
+       <div class="image-container">
+        <img src="images/laiva.png" alt="Džekiņš laivo no viena attēla citā"> 
+        <img src="images/vards.png" alt="Stilizēts vārds Kaspars">
+        <img src="imges/film.gif" alt="Dvivi superīgi auto">
+       </div>
+            
         <h3>Grupu projekts</h3>
         
         
