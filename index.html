@@ -121,7 +121,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <a href="#project">Grupu projekts</a>
         <a href="#video">Video</a>
         <a href="#content">Word/Excel</a>
-        <a href="#contact">Kontakti</a>
+        <a href="#kluda">Atradi kļūdu?</a>
       </div>
   
         <img src="images/plava2.jpg" style="width:100%;min-height:350px;max-height:600px;">
@@ -190,6 +190,40 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </div>
     </div>
            </div>
+
+            
+            <div class="segment" id="kluda">
+                <form action="submit_report.php" method="POST">
+    <h4>Atradi kļūdu? Palīdzi to izlabot</h4>
+
+    <label for="name">Tavs vārds</label>
+    <input type="text" id="name" name="name" required>
+
+    <br><br>
+                    
+    <label for="surname">Tavs uzvārds</label>
+    <input type="text" id="surname" name="surname" required>
+
+    <br><br>
+
+    <label for="age">Tavs vecums</label>
+    <input type="number" id="age" name="age" min="1" required>
+
+    <br><br>
+
+    <label for="mistake">Apraksti kļūdu</label>
+    <textarea id="mistake" name="mistake" rows="4" required></textarea>
+
+    <br><br>
+
+    <label for="suggestion">Kā būtu pareizi?</label>
+    <textarea id="suggestion" name="suggestion" rows="4" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Iesniegt</button>
+</form>
+            </div>
         
     </body>
 </html>
