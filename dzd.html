@@ -11,7 +11,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     <body>
    <h1>Gaidot dzimšanas dienu..</h1>
       <hr style="width: 100%; border: 1px solid black;">
-         <form>
+  <h2>Enter the full date of your next birthday</h2>
+
+    <form>
         <label>Year:</label>
         <input type="text" name="year" id="year"><br><br>
 
@@ -23,5 +25,28 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 
         <button type="button" name="button" onclick="calculateDays()">Calculate days until birthday</button>
     </form>
+
+    <h3>Days left until your birthday: <input type="text" name="days" id="days" readonly> days :)</h3>
+
+    <script>
+        function calculateDays() {
+            let year = parseInt(document.getElementById("year").value);
+            let month = parseInt(document.getElementById("month").value) - 1; // Months are 0-based in JS
+            let day = parseInt(document.getElementById("day").value);
+
+            let today = new Date();
+            let birthday = new Date(today.getFullYear(), month, day);
+
+            // If birthday already passed this year, set for next year
+            if (birthday < today) {
+                birthday.setFullYear(today.getFullYear() + 1);
+            }
+
+            let timeDifference = birthday - today;
+            let daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+            document.getElementById("days").value = daysLeft;
+        }
+    </script>
     </body>
 </html>
