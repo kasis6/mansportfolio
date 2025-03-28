@@ -3,40 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Countdown</title>
+    <title></title>
 </head>
 <body>
-    <h3>Enter your next birthday date:</h3>
     
-    <label>Year:</label>
-    <input type="text" id="year"><br>
-
-    <label>Month:</label>
-    <input type="text" id="month"><br>
-
-    <label>Day:</label>
-    <input type="text" id="day"><br>
-
-    <button onclick="calculateDays()">Calculate Days</button>
-
-    <h3>Days left until your birthday:</h3>
-    <input type="text" id="days" readonly>
-
-    <script>
-        function calculateDays() {
-            let year = parseInt(document.getElementById("year").value);
-            let month = parseInt(document.getElementById("month").value) - 1;
-            let day = parseInt(document.getElementById("day").value);
-
-            let today = new Date();
-            let birthday = new Date(year, month, day);
-
-            if (birthday < today) birthday.setFullYear(today.getFullYear() + 1);
-
-            let daysLeft = Math.ceil((birthday - today) / (1000 * 60 * 60 * 24));
-
-            document.getElementById("days").value = daysLeft;
-        }
-    </script>
 </body>
 </html>
