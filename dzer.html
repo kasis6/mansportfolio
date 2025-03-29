@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+<body>
+ <h4>Dzērienu izvēle:</h4>
+
+<form>
+  <p><input type="radio" id="kafija" name="drink" value="2.00">
+        <label for="kafija">Kafija</label></p>
+<p><input type="radio" id="sula" name="drink" value="1.30">
+        <label for="sula">Sula</label></p>
+<p><input type="radio" id="kakao" name="drink" value="2.20">
+        <label for="kakao">Kakao</label></p>
+<p><input type="radio" id="tēja" name="drink" value="1.00">
+        <label for="tēja">Tēja</label></p>
+<p><input type="button" id="poga" value="Jāmaksā" onclick="izvele()">
+        <span id="cena"></span></p>
+</form>
+<script>
+
+    function izvele(){
+      let dz = document.getElementsByName('drink');
+      for(let i = 0; i < dz.length; i++) {
+         if(dz[i].checked)
+            document.getElementById("cena").innerText = "Cena: " + dz[i].value + " EUR";}}
+</script>
+
+
+</body>
+</html>
