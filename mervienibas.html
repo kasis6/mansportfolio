@@ -14,11 +14,11 @@
 <h1>Informācijas daudzuma mērvienības</h1>    
 
 <form>
-   <input type="text" id="GB" placeholder="GB">" GB =" <br>
+   <input type="text" id="GB" value="1"> GB = <br>
   <button onclick="konverts('MB')">Izteikt megabaitos</button>
-    <input type="text" id="MB" readonly>" MB"<br>
+    <input type="text" id="MB" readonly> MB<br>
     <button onclick="konverts('MiB')">Izteikt mibibaitos</button>
-    <input type="text" id="MiB" readonly>" MiB"<br>
+    <input type="text" id="MiB" readonly>"MiB<br>
 </form>
 
  <script>
@@ -26,7 +26,7 @@
             let gb = parseFloat(document.getElementById("GB").value);
             if (tips === 'MB') {
                 document.getElementById("MB").value = GB * 1024;
-            } else if (tips === 'mib') {
+            } else if (tips === 'MiB') {
                 document.getElementById("MiB").value = GB * 1024 * 1.024;
             }
         }
