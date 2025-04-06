@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informācijas daudzuma mērvienības</title>
     <style>
-         form {background-color: rgb(220, 220, 0);
+         .container {background-color: rgb(220, 220, 0);
               font-size:20px;}
        body {background-image: url('images/cipari.jpg');}
     </style>
 </head>
 <body>
 <h1>Informācijas daudzuma mērvienības</h1>    
+<div class="container">
+        <input type="text" id="GB" value="1"> GB =<br>
+        <button onclick="kon('MB')">Izteikt megabaitos</button>
+        <input type="text" id="MB" readonly> MB<br>
+        <button onclick="kon('MiB')">Izteikt mibibaitos</button>
+        <input type="text" id="MiB" readonly> MiB
+    </div>
 
-<form>
-   <input type="text" id="GB" value="1"> GB = <br>
-  <button onclick="konverts('MB')">Izteikt megabaitos</button>
-    <input type="text" id="MB" readonly> MB<br>
-    <button onclick="konverts('MiB')">Izteikt mibibaitos</button>
-    <input type="text" id="MiB" readonly>"MiB<br>
-</form>
 
- <script>
-        function konverts(tips) {
+<script>
+        function kon(tips) {
             let gb = parseFloat(document.getElementById("GB").value);
             if (tips === 'MB') {
                 document.getElementById("MB").value = GB * 1024;
